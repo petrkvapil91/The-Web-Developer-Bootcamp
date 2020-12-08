@@ -1,0 +1,30 @@
+#toDoL {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+    padding-bottom: 20px;
+    border-radius: 40%;
+}
+
+#list {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+li {
+    color: rgb(45, 32, 23);
+    font-weight: bold;
+
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+#itemInput:hover {
+    background-color: rgb(173, 197, 244);
+}
