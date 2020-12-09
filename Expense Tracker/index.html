@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Expense Tracker</title>
 </head>
+
 <body>
-    <h1>Expense Tracker</h1>
-    <h3>Add A New Item:</h3>
+    <div class="headings">
+        <h1>Expense Tracker</h1>
+        <h3>Add A New Item:</h3>
+    </div>
     <form action="/submit">
-        <div>
+        <div class='name'>
             <label for="place">Name:</label>
             <input type="text" name="place" id="place" placeholder="Where was the expense made?">
         </div>
         <div>
             <label for="date">Date:</label>
             <input type="date" name="date" id="date" placeholder="mm/dd/yyyy">
-            <label for="place">Amount:</label>
+            <label for="price">Amount:</label>
             <input type="number" name="price" id="price" placeholder="$$">
         </div>
         <button type="submit">Add Expense</button>
     </form>
 
-    <table style="border: 2px solid black;">
+    <table>
         <thead>
             <tr>
                 <th>Name</th>
@@ -31,15 +35,14 @@
                 <th>Amount</th>
             </tr>
         </thead>
-        <tbody>
-            <tr id='list'>
-                <td>McDonalds</td>
-                <td>2020</td>
-                <td>12 dollars</td>
+        <tbody id='list'>
+            <tr id='empty'>
+                <td colspan="3">No expenses added yet!</td>
             </tr>
         </tbody>
     </table>
 
     <script src="app.js"></script>
 </body>
+
 </html>
