@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 const list = document.getElementById('list');
 const empty = document.getElementById('empty');
+const extraLi = document.querySelector('#list li');
 
 const formSubmit = form.addEventListener('submit', (e) => {
     if (form.elements.place.value == "" || form.elements.date.value == 0 || form.elements.price.value == "") {
@@ -25,7 +26,8 @@ const formSubmit = form.addEventListener('submit', (e) => {
     const newRow = document.createElement('tr');
     
     const newDeleteB = document.createElement('td');
-    const deleteButton = document.createElement('button')
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('buttonStyle');
     
     deleteButton.innerText = ('X');
    
@@ -34,10 +36,9 @@ const formSubmit = form.addEventListener('submit', (e) => {
     deleteButton.addEventListener('click', (e) => {
         list.removeChild(newRow);         
         
-/////////////////need to fix this ---- when i delete mz items i want ==No expenses added yet!== again ////////////////
-        // if (list.firstChild.value == null) {
-        //     list.append(empty);
-        // }
+    if (extraLi === null) {
+        list.append(empty);
+        }
     })
 
     newRow.append(newName);
@@ -56,8 +57,6 @@ const formSubmit = form.addEventListener('submit', (e) => {
     form.elements.price.value = "";
 }
 })
-
-
 
 
 
