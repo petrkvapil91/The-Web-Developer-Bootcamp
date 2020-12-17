@@ -6,6 +6,7 @@ const section = document.querySelector(".section");
 addButton.addEventListener('click', () => {
     const noteText = notePage.value;
     const newNote = document.createElement("div");
+    newNote.classList.add('notes');
     const newHeading = document.createElement("h4");
     const newButton = document.createElement("button");
 
