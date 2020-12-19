@@ -2,6 +2,7 @@ const note = document.querySelector(".note");
 const addButton = document.getElementById("addButton");
 const notePage = document.getElementById("notePage");
 const section = document.querySelector(".section");
+const allNotes = document.querySelector('.section').getElementsByTagName('div');
 
 addButton.addEventListener('click', () => {
     const noteText = notePage.value;
@@ -25,18 +26,34 @@ addButton.addEventListener('click', () => {
         newButton.innerText = "View Detail";
     }
     function headingStyle() {
-        newHeading.innerText = "Note"
-    }
+    for (let index = 0; index <= allNotes.length; ++index) {
+        newHeading.innerText = `Note ${index+1}`
+        }
+    }   
+
     notePage.value = "";
 
-    newButton.addEventListener('click', () => {
-        const newWindow = document.createElement("div");
-        const closeButton = document.createElement("button");
-        closeButton.innerText = "X"
-        const body = document.querySelector('.body')
-        newWindow.classList.add("newWindow");
-        newWindow.append(closeButton);
-        newWindow.append(noteText);
-        body.appendChild(newWindow);
+    newButton.addEventListener('click', viewDetail);
+      
+    function viewDetail() {
+        const show = document.querySelector('.detail');
+        const innerText = document.getElementById("detailText")
+        show.style.display = "block";
+        innerText.append(newNoteText.innerText);
+    }
+
+    const closeBtn = document.getElementById("backButton");
+
+    closeBtn.addEventListener("click", () => {
+        const show = document.querySelector('.detail');
+        show.style.display = "none";
+    })
+
+    const deleteButton = document.createElement("button");
+    newNote.append(deleteButton);
+    deleteButton.innerText = "DELETE";
+    
+    deleteButton.addEventListener('click', () => {
+        newNote.remove();
     })
 })
