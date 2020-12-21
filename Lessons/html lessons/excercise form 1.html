@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+	<h1>Register</h1>
+<form>
+	
+	<div>
+		<label for="firstname">First Name:</label>
+		<input id="firstname" type="text" name="FirstName" placeholder="John" required>
+
+		<label for="lastname">Last Name:</label>
+		<input id="lastname" type="text" name="lastName" placeholder="Smith" required>
+	</div>
+
+	<div>
+		<label for="Male">Male</label>
+		<input id="male" type="radio" 
+	     name="gender" value="Male">
+	     
+	    <label for="female">Female</label>
+		<input id="female" type="radio" 
+	     name="gender" value="female">
+ 
+	    <label for="other">Other</label>
+		<input id="other" type="radio" 
+	     name="gender" value="other">
+    </div>
+
+   	<div>
+	   	<label for="email">Email:</label>
+		<input id="email" type="email" name="email" placeholder="your email" required>
+
+		<label for="password">Password:</label>
+		<input id="password" type="password" name="lastName" placeholder="your password" input pattern=".{5,10}" required title="5 to 10 characters" required>
+   	</div>
+	
+	<div>
+		<label for="bday">Birthday:</label>
+			<select name="Month" id="bday">
+				<option value="">Month</option>
+				<option value="january">January</option>
+				<option value="feb">feb</option>
+				<option value="march">march</option>
+				<option value="april">april</option>
+			</select>
+			
+			<select name="Day" id="bday">
+				<option value="">Day</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+
+			<select name="Year" id="bday">
+				<option value="">Year</option>
+				<option value="1991">1991</option>
+				<option value="1582">1582</option>
+				<option value="2018">2018</option>
+				<option value="2001">2001</option>
+			</select>
+			
+	</div>
+
+	<div>
+		<p><label for="tac">I agree to the term and conditions</label>
+		<input id="tac" type="checkbox" name="tac" required></p>
+	</div>
+	
+	<input type="Submit" name="Submit"></input>
+
+</form>
+
+</body>
+</html>

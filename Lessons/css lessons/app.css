@@ -1,0 +1,23 @@
+h1 {
+	color: #62056C;
+	
+	/*border-color: purple;
+	border-width: 5px;
+	border-style: solid; */
+
+	border: 2px solid #D14B09
+}
+
+/*width color style*/
+
+h4 {
+	background: #D14B09
+}
+
+body {
+	background: pink
+
+/*	background: url(https://previews.123rf.com/images/meseberg/meseberg1706/meseberg170600241/81488206-wood-grain.jpg);
+	background-repeat: no-repeat;
+	background-size: cover; */
+}

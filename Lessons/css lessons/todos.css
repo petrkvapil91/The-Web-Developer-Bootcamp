@@ -1,0 +1,25 @@
+body {
+	background: orange;
+}
+li {
+	border: 2px solid red;
+} 
+
+#recording {
+	background: yellow;
+}
+
+.completed {
+	text-decoration: line-through;
+}
+
+span {
+	font-size: 2.0em;
+}
+
+p {
+	border: 2px solid blue;
+	width: 50%;
+	padding: 10%;
+	margin: 20px;
+}  
